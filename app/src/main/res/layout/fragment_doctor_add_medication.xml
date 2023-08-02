@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".doctor.DoctorAddMedicationFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/SubTitleTextAppearance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/medication_name_enquiry"
+            android:textColor="@color/colorPrimaryVariant" />
+
+        <EditText
+            android:id="@+id/edtMedicationName"
+            style="@style/BodyTextAppearance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edt_bg_one"
+            android:hint="@string/medication_name"
+            android:inputType="text"
+            android:padding="14dp"
+            android:textColor="@color/colorPrimaryVariant" />
+
+        <TextView
+            style="@style/SubTitleTextAppearance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/medication_type_enquiry"
+            android:textColor="@color/colorPrimaryVariant" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:paddingHorizontal="14dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivCapsule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="8dp"
+                    android:background="@drawable/medication_type_icon_bg_inactive"
+                    android:padding="16dp"
+                    android:src="@drawable/ic_capsule" />
+
+                <ImageView
+                    android:id="@+id/ivLiquid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="8dp"
+                    android:background="@drawable/medication_type_icon_bg_inactive"
+                    android:padding="16dp"
+                    android:src="@drawable/ic_liquid" />
+
+                <ImageView
+                    android:id="@+id/ivSyringe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="8dp"
+                    android:background="@drawable/medication_type_icon_bg_inactive"
+                    android:padding="16dp"
+                    android:src="@drawable/ic_syringe" />
+
+                <ImageView
+                    android:id="@+id/ivDrop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="8dp"
+                    android:background="@drawable/medication_type_icon_bg_inactive"
+                    android:padding="16dp"
+                    android:src="@drawable/ic_drops" />
+
+                <ImageView
+                    android:id="@+id/ivOintment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="8dp"
+                    android:background="@drawable/medication_type_icon_bg_inactive"
+                    android:padding="16dp"
+                    android:src="@drawable/ic_ointment" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            style="@style/SubTitleTextAppearance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/dose_enquiry"
+            android:textColor="@color/colorPrimaryVariant" />
+
+        <RelativeLayout
+            android:id="@+id/relativeDose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edt_bg_one"
+            android:padding="14dp">
+
+            <TextView
+                style="@style/BodyTextAppearance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/unit"
+                android:textColor="@color/colorPrimaryVariant" />
+
+            <TextView
+                android:id="@+id/tvDoseInput"
+                style="@style/BodyTextAppearance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@id/tvDoseUnit"
+                android:textColor="@color/dark_blue"
+                tools:text="1" />
+
+            <TextView
+                android:id="@+id/tvDoseUnit"
+                style="@style/BodyTextAppearance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text="@string/capsule_unit"
+                android:textColor="@color/dark_blue" />
+
+        </RelativeLayout>
+
+        <TextView
+            style="@style/SubTitleTextAppearance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/medication_frequency_enquiry"
+            android:textColor="@color/colorPrimaryVariant" />
+
+        <Spinner
+            android:id="@+id/spinnerFrequency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="10dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:popupBackground="@color/colorVariant"
+            android:spinnerMode="dropdown" />
+
+        <RelativeLayout
+            android:id="@+id/relativeDayPicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edt_bg_one"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/linearWeekdays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <CheckBox
+                    android:id="@+id/cbMon"
+                    style="@style/BodyTextAppearance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/monday"
+                    android:textColor="@color/colorPrimaryVariant"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/cbTue"
+                    style="@style/BodyTextAppearance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/tuesday"
+                    android:textColor="@color/colorPrimaryVariant"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/cbWed"
+                    style="@style/BodyTextAppearance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/wednesday"
+                    android:textColor="@color/colorPrimaryVariant"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/cbThu"
+                    style="@style/BodyTextAppearance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/thursday"
+                    android:textColor="@color/colorPrimaryVariant"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearWeekends"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearWeekdays"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cbFri"
+                    style="@style/BodyTextAppearance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:text="@string/friday"
+                    android:textColor="@color/colorPrimaryVariant"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/cbSat"
+                    style="@style/BodyTextAppearance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="6dp"
+                    android:text="@string/saturday"
+                    android:textColor="@color/colorPrimaryVariant"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/cbSun"
+                    style="@style/BodyTextAppearance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:text="@string/sunday"
+                    android:textColor="@color/colorPrimaryVariant"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linearAddReminderTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edt_bg_one"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/relativeAddReminderTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivAddTime1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_add"
+                    app:tint="@color/dark_green" />
+
+                <TextView
+                    android:id="@+id/tvAddReminderTime"
+                    style="@style/BodyTextAppearance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@id/ivAddTime1"
+                    android:text="@string/add_reminder_time"
+                    android:textColor="@color/colorPrimaryVariant" />
+
+                <TextView
+                    android:id="@+id/tvTime1"
+                    style="@style/BodyTextAppearance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/dark_blue"
+                    tools:text="7:00 AM" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="14dp"
+                android:background="@color/gray"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="14dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/SubTitleTextAppearance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/duration_enquiry"
+                android:textColor="@color/colorPrimaryVariant" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edt_bg_one"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/relativeStartDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="14dp">
+
+                    <TextView
+                        style="@style/BodyTextAppearance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/start_date"
+                        android:textColor="@color/colorPrimaryVariant" />
+
+                    <TextView
+                        android:id="@+id/tvStartDateInput"
+                        style="@style/BodyTextAppearance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/dark_blue"
+                        tools:text="17/6/2023" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="14dp"
+                    android:background="@color/gray" />
+
+                <Spinner
+                    android:id="@+id/spinnerDuration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:popupBackground="@color/colorVariant"
+                    android:spinnerMode="dropdown" />
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="14dp"
+                    android:background="@color/gray" />
+
+                <RelativeLayout
+                    android:id="@+id/relativeDurationOrEndDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:id="@+id/tvDurationOrEndDate"
+                        style="@style/BodyTextAppearance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/end_date"
+                        android:textColor="@color/colorPrimaryVariant" />
+
+                    <TextView
+                        android:id="@+id/tvDurationOrEndDateInput"
+                        style="@style/BodyTextAppearance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/dark_blue"
+                        tools:text="20/6/2023" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/SubTitleTextAppearance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/intake_instructions_enquiry"
+            android:textColor="@color/colorPrimaryVariant" />
+
+        <Spinner
+            android:id="@+id/spinnerIntakeInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="10dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:popupBackground="@color/colorVariant"
+            android:spinnerMode="dropdown" />
+
+        <EditText
+            android:id="@+id/edtManualEntry"
+            style="@style/BodyTextAppearance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edt_bg_one"
+            android:hint="@string/manual_entry_hint"
+            android:inputType="text"
+            android:lines="3"
+            android:padding="14dp"
+            android:textColor="@color/colorPrimaryVariant"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btnConfirm"
+            style="@style/BodyTextAppearance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginBottom="14dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorPrimaryVariant"
+            android:text="@string/confirm"
+            android:textColor="@color/colorPrimary" />
+
+    </LinearLayout>
+
+</ScrollView>

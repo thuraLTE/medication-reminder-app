@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeAddReminderTime"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="14dp">
+
+    <ImageView
+        android:id="@+id/ivAddAnotherTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        app:tint="@color/dark_green" />
+
+    <TextView
+        android:id="@+id/tvAddAnotherReminderTime"
+        style="@style/BodyTextAppearance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/ivAddAnotherTime"
+        android:text="@string/add_reminder_time"
+        android:textColor="@color/colorPrimaryVariant" />
+
+    <TextView
+        android:id="@+id/tvAddedAnotherTime"
+        style="@style/BodyTextAppearance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/dark_blue"
+        tools:text="7:00 AM" />
+
+</RelativeLayout>

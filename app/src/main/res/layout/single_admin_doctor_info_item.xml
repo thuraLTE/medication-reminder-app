@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvDoctorName"
+        style="@style/SubTitleTextAppearance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryVariant"
+        android:textSize="22sp"
+        tools:text="John Wick" />
+
+    <TextView
+        android:id="@+id/tvDoctorId"
+        style="@style/BodyTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorPrimaryVariant"
+        android:textStyle="italic"
+        tools:text="Doc_123456789" />
+
+    <TextView
+        android:id="@+id/tvDoctorSpecialization"
+        style="@style/BodyTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorPrimaryVariant"
+        tools:text="Neurologist" />
+
+    <TextView
+        android:id="@+id/tvDoctorQualification"
+        style="@style/BodyTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorPrimaryVariant"
+        tools:text="Doctor of Endocrinology (2013)" />
+
+    <TextView
+        android:id="@+id/tvDoctorEmail"
+        style="@style/BodyTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorPrimaryVariant"
+        tools:text="johnwick@gmail.com" />
+
+    <TextView
+        android:id="@+id/tvDoctorPhNum"
+        style="@style/BodyTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorPrimaryVariant"
+        tools:text="09123456" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray" />
+
+</LinearLayout>

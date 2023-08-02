@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context=".patient.PatientMyDoctorFragment">
+
+    <TextView
+        android:id="@+id/tvEmptySubscribedDoctor"
+        style="@style/SubTitleTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/no_subscribed_doctor_found"
+        android:textColor="@color/colorPrimaryVariant"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/scrollSubscribedDoctor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tvMyDoctorName"
+                        style="@style/SubTitleTextAppearance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimaryVariant"
+                        tools:text="Doc. John Wick" />
+
+                    <TextView
+                        android:id="@+id/tvMyDoctorId"
+                        style="@style/BodyTextAppearance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimaryVariant"
+                        tools:text="Doc_12345" />
+
+                    <TextView
+                        android:id="@+id/tvMyDoctorEmail"
+                        style="@style/BodyTextAppearance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimaryVariant"
+                        tools:text="johnwick.doctor@medicare.org" />
+
+                    <TextView
+                        android:id="@+id/tvMyDoctorPhNum"
+                        style="@style/BodyTextAppearance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimaryVariant"
+                        tools:text="09123456789" />
+
+                    <TextView
+                        android:id="@+id/tvMyDoctorSpecialization"
+                        style="@style/BodyTextAppearance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimaryVariant"
+                        tools:text="Neurologist" />
+
+                    <TextView
+                        android:id="@+id/tvMyDoctorQaulification"
+                        style="@style/BodyTextAppearance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimaryVariant"
+                        tools:text="PhD of Neurology" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_schedule" />
+
+                    <TextView
+                        style="@style/SubTitleTextAppearance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Upcoming Appointments"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimaryVariant" />
+
+                    <LinearLayout
+                        android:id="@+id/linearAddAppointmentTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnAddAppointment"
+                        style="@style/BodyTextAppearance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="@color/colorPrimaryVariant"
+                        android:text="Add an appointment"
+                        android:textColor="@color/colorPrimary" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btnConfirm"
+                style="@style/BodyTextAppearance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/colorPrimaryVariant"
+                android:text="@string/confirm"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

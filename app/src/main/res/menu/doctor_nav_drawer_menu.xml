@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/fragmentDoctorAppointmentList"
+            android:title="@string/appointments"
+            android:icon="@drawable/ic_inbox"
+            android:checked="true"/>
+
+        <item
+            android:id="@+id/fragmentDoctorMyPatientList"
+            android:title="@string/patients"
+            android:icon="@drawable/ic_patient"/>
+
+    </group>
+</menu>

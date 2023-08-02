@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvPatientName"
+        style="@style/SubTitleTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryVariant"
+        android:textSize="22sp"
+        tools:text="David Hirby" />
+
+    <TextView
+        android:id="@+id/tvPatientId"
+        style="@style/BodyTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorPrimaryVariant"
+        android:textStyle="italic"
+        tools:text="Pat_123456789" />
+
+    <TextView
+        android:id="@+id/tvPatientMedicationAmount"
+        style="@style/BodyTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/dark_blue"
+        tools:text="2 medications" />
+
+    <TextView
+        android:id="@+id/tvPatientAppointments"
+        style="@style/BodyTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/dark_blue"
+        tools:text="2 appointments" />
+
+    <TextView
+        android:id="@+id/tvPatientEmail"
+        style="@style/BodyTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorPrimaryVariant"
+        tools:text="davidhirby@gmail.com" />
+
+    <TextView
+        android:id="@+id/tvPatientPhNum"
+        style="@style/BodyTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorPrimaryVariant"
+        tools:text="091234567" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray" />
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingHorizontal="14dp">
+
+    <ImageView
+        android:id="@+id/ivDeleteAppointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_remove" />
+
+    <TextView
+        android:id="@+id/tvAppointmentDate"
+        style="@style/BodyTextAppearance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/ivDeleteAppointment"
+        android:layout_marginStart="10dp"
+        android:layout_centerVertical="true"
+        android:textColor="@color/dark_blue"
+        tools:text="10/07/2013" />
+
+    <TextView
+        android:id="@+id/tvAppointmentTime"
+        style="@style/BodyTextAppearance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/dark_blue"
+        tools:text="7:00 AM" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvAppointmentDate"
+        android:layout_marginTop="20dp"
+        android:background="@color/light_gray" />
+
+</RelativeLayout>

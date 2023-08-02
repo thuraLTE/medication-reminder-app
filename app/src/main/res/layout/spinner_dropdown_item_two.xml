@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/BodyTextAppearance"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorAccent"
+    android:paddingVertical="18dp"
+    android:paddingHorizontal="14dp"
+    android:textColor="@color/colorPrimaryVariant"
+    tools:text="X times daily">
+
+</CheckedTextView>

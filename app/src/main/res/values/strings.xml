@@ -1,0 +1,119 @@
+<resources>
+    <string name="app_name">Medicare</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="today">Today</string>
+    <string name="support">Support</string>
+    <string name="doctors">Doctors</string>
+    <string name="family">Family</string>
+    <string name="medication_list">Medication List</string>
+    <string name="medication">Medication</string>
+    <string name="patients">Patients</string>
+    <string name="inbox">Inbox</string>
+    <string name="library">Library</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="add_medication">Add Medication</string>
+    <string name="pill_library">Pill Library</string>
+    <string name="name">Name</string>
+    <string name="medication_name">Medication Name</string>
+    <string name="medication_name_enquiry">What medication does this patient need?</string>
+    <string name="medication_type_enquiry">What type of medication?</string>
+    <string name="medication_frequency_enquiry">How often should this medication be taken?</string>
+    <string name="duration_enquiry">For how long?</string>
+    <string name="start_date">Start date</string>
+    <string name="end_date">Until</string>
+    <string name="duration">Duration</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="day_duration_enquiry">For how many days?</string>
+    <string name="day_unit_placeholder">%s days</string>
+    <string name="add_reminder_time">Add reminder time</string>
+    <string name="remove_reminder_time">Remove reminder time</string>
+    <string name="monday">Mon</string>
+    <string name="tuesday">Tue</string>
+    <string name="wednesday">Wed</string>
+    <string name="thursday">Thu</string>
+    <string name="friday">Fri</string>
+    <string name="saturday">Sat</string>
+    <string name="sunday">Sun</string>
+    <string name="intake_instructions_enquiry">Any intake instructions?</string>
+    <string name="manual_entry_hint">Type your specific instructions ...</string>
+    <string name="dose_enquiry">How many doses per intake?</string>
+    <string name="unit">Unit</string>
+    <string name="unit_enquiry_placeholder">How many %s?</string>
+    <string name="capsule_unit">capsule(s)</string>
+    <string name="your_email">Enter email address</string>
+    <string name="your_password">Enter password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="your_fullname">Enter fullname</string>
+    <string name="empty_medication_list">No medications for you today.</string>
+    <string name="nurses">Nurses</string>
+    <string name="search_patients_hint">Search Patients</string>
+    <string name="patient_information">Patient Info</string>
+    <string name="monitored_by">Monitored by</string>
+    <string name="status">Status</string>
+    <string name="your_phone_number">Enter Phone Number</string>
+    <string name="search_doctors_hint">Search doctors</string>
+    <string name="search_nurses">Search nurses</string>
+    <string name="add_new_doctor">Add new doctor</string>
+    <string name="doctor_s_full_name">Doctor\'s Full Name</string>
+    <string name="doctor_s_email">Doctor\'s Email</string>
+    <string name="doctor_s_phone_number">Doctor\'s Phone Number</string>
+    <string name="doctor_s_specialization">Doctor\'s Specialization</string>
+    <string name="doctor_s_qualification">Doctor\'s Qualification</string>
+    <string name="new_doctor_registration">New Doctor Registration</string>
+    <string name="subscribe_doctor">Subscribe Doctor</string>
+    <string name="my_doctor_list">My Doctor List</string>
+    <string name="subscribed">Subscribed</string>
+    <string name="unsubscribe_doctor">Unsubscribe Doctor</string>
+    <string name="your_specialization">Enter your specialization</string>
+    <string name="enter_qualification">Enter Qualification</string>
+    <string name="appointments">Appointments</string>
+    <string name="no_results_found">No results found!</string>
+    <string name="medication_amount_placeholder">%d medications</string>
+    <string name="appointment_amount_placeholder">%d appointments</string>
+    <string name="no_subscribed_doctor_found">No subscribed doctor found!</string>
+    <string name="empty_appointment_list_message">There are currently no appointments arranged by your patients.</string>
+    <string name="empty_my_patient_list_message">Sorry, no patients have subscribed to you yet.</string>
+    <string name="empty_medication_list_message">Your medications will appear hear once your doctor has conducted your prescription.</string>
+    <string name="frequency_placeholder">%1$d times %2$s</string>
+    <string name="end_date_placeholder">Until %s</string>
+    <string name="no_end_date">No end date</string>
+    <string name="notification_title_placeholder">Medication at %s</string>
+    <string name="notification_text_placeholder">%1$s %2$d %3$s</string>
+    <string name="no_registered_patients_message">No registered patients yet!</string>
+    <string name="no_registered_doctors_message">No registered doctors yet!</string>
+    <string-array name="frequency_array">
+        <item>Select frequency</item>
+        <item>X times daily</item>
+        <item>X days weekly</item>
+    </string-array>
+    <string-array name="duration_array">
+        <item>No end date</item>
+        <item>Until date</item>
+        <item>For X days</item>
+    </string-array>
+    <string-array name="intake_instructions_array">
+        <item>None</item>
+        <item>Before meal</item>
+        <item>With meal</item>
+        <item>After meal</item>
+        <item>Enter manually</item>
+    </string-array>
+    <string-array name="doctor_category_array">
+        <item>Select category</item>
+        <item>Endocrinologist</item>
+        <item>Gastroenterologist</item>
+        <item>Cardiologist</item>
+        <item>Dermatologist</item>
+        <item>Neurologist</item>
+        <item>Urologist</item>
+        <item>Orthopaedist</item>
+        <item>Ophthalmologist</item>
+        <item>Oncologist</item>
+        <item>Psychiatrist</item>
+    </string-array>
+</resources>
