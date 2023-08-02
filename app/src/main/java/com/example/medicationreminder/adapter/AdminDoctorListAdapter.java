@@ -24,6 +24,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.List;
+import java.util.Objects;
 
 public class AdminDoctorListAdapter extends RecyclerView.Adapter<AdminDoctorListAdapter.AdminDoctorItemViewHolder> {
 
@@ -148,6 +149,57 @@ public class AdminDoctorListAdapter extends RecyclerView.Adapter<AdminDoctorList
                 @Override
                 public void onCancelled(@NonNull DatabaseError error) {
 
+                }
+            });
+        } else {
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    PopupMenu popupMenu = new PopupMenu(context, view);
+                    popupMenu.getMenuInflater().inflate(R.menu.admin_delete_doctor_menu, popupMenu.getMenu());
+                    popupMenu.show();
+
+                    popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                        @Override
+                        public boolean onMenuItemClick(MenuItem menuItem) {
+
+                            String currentDoctorId = doctorList.get(holder.getBindingAdapterPosition()).getDoctorId();
+                            if (menuItem.getItemId() == R.id.menuDeleteDoctor) {
+
+                                doctorDatabaseRef.child(currentDoctorId).removeValue();
+
+                                patientDatabaseRef.addValueEventListener(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                        if (snapshot.exists()) {
+                                            for (DataSnapshot childSnapSnot : snapshot.getChildren()) {
+                                                if (childSnapSnot.exists()) {
+                                                    Doctor connDoctor = childSnapSnot.getValue(Doctor.class);
+
+                                                    assert connDoctor != null;
+                                                    if (connDoctor.getDoctorId().equals(currentDoctorId)) {
+                                                        childSnapSnot.getRef().removeValue();
+
+                                                        Toast.makeText(context, "Doctor Removed Successfully", Toast.LENGTH_SHORT).show();
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError error) {
+
+                                    }
+                                });
+
+                                doctorList.remove(holder.getBindingAdapterPosition());
+                                refreshDoctorList(doctorList);
+
+                                return true;
+                            } else return false;
+                        }
+                    });
                 }
             });
         }

@@ -7,12 +7,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.medicationreminder.R;
 import com.example.medicationreminder.adapter.AdminDoctorListAdapter;
@@ -27,7 +29,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.tsuryo.swipeablerv.SwipeLeftRightCallback;
-import com.tsuryo.swipeablerv.SwipeableRecyclerView;
 
 import java.util.ArrayList;
 
@@ -38,11 +39,12 @@ public class AdminDoctorListFragment extends Fragment {
     Context context;
     TextView tvEmptyDoctorList;
     FloatingActionButton fabAddNewDoctor;
-    SwipeableRecyclerView rvDoctorList;
+    RecyclerView rvAdminDoctorList;
     AdminDoctorListAdapter adminDoctorListAdapter;
     ArrayList<Doctor> doctorList;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference doctorDatabaseRef;
+    DatabaseReference patientDatabaseRef;
     Boolean isPatient = false;
 
     public AdminDoctorListFragment() {
@@ -70,10 +72,12 @@ public class AdminDoctorListFragment extends Fragment {
 
         fabAddNewDoctor = view.findViewById(R.id.fabAddNewDoctor);
 
-        rvDoctorList = view.findViewById(R.id.rvDoctorList);
+        rvAdminDoctorList = view.findViewById(R.id.rvAdminDoctorList);
         doctorList = new ArrayList<>();
 
         firebaseDatabase = FirebaseDatabase.getInstance();
+
+        patientDatabaseRef = firebaseDatabase.getReference(Constants.PATH_PATIENTS);
     }
 
     private void populateDoctorList() {
@@ -93,38 +97,15 @@ public class AdminDoctorListFragment extends Fragment {
 
                 if (doctorList.isEmpty()) {
                     tvEmptyDoctorList.setVisibility(View.VISIBLE);
-                    rvDoctorList.setVisibility(View.GONE);
+                    rvAdminDoctorList.setVisibility(View.GONE);
 
                 } else {
                     tvEmptyDoctorList.setVisibility(View.GONE);
-                    rvDoctorList.setVisibility(View.VISIBLE);
+                    rvAdminDoctorList.setVisibility(View.VISIBLE);
 
-                    adminDoctorListAdapter = new AdminDoctorListAdapter(context, doctorList, isPatient, null, null, doctorDatabaseRef);
-                    rvDoctorList.setAdapter(adminDoctorListAdapter);
-                    rvDoctorList.setLayoutManager(new LinearLayoutManager(context));
-
-                    rvDoctorList.setListener(new SwipeLeftRightCallback.Listener() {
-                        @Override
-                        public void onSwipedLeft(int position) {
-
-                        }
-
-                        @Override
-                        public void onSwipedRight(int position) {
-                            doctorDatabaseRef.child(doctorList.get(position).getDoctorId()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-                                    if (task.isSuccessful())
-                                        Log.d(TAG, "Doctor deleted successfully");
-                                    else
-                                        Log.d(TAG, "Failure to delete doctor");
-                                }
-                            });
-
-                            doctorList.remove(position);
-                            adminDoctorListAdapter.notifyDataSetChanged();
-                        }
-                    });
+                    adminDoctorListAdapter = new AdminDoctorListAdapter(context, doctorList, isPatient, null, patientDatabaseRef, doctorDatabaseRef);
+                    rvAdminDoctorList.setAdapter(adminDoctorListAdapter);
+                    rvAdminDoctorList.setLayoutManager(new LinearLayoutManager(context));
                 }
 
             }

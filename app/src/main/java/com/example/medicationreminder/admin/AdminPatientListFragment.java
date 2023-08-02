@@ -1,11 +1,13 @@
 package com.example.medicationreminder.admin;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -17,15 +19,11 @@ import com.example.medicationreminder.R;
 import com.example.medicationreminder.adapter.AdminPatientListAdapter;
 import com.example.medicationreminder.helpers.Constants;
 import com.example.medicationreminder.model.Patient;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.tsuryo.swipeablerv.SwipeLeftRightCallback;
-import com.tsuryo.swipeablerv.SwipeableRecyclerView;
 
 import java.util.ArrayList;
 
@@ -33,12 +31,14 @@ public class AdminPatientListFragment extends Fragment {
 
     private static final String TAG = "AdminPatientListFragment";
 
+    Context context;
     TextView tvEmptyPatientList;
-    SwipeableRecyclerView rvPatientList;
+    RecyclerView rvAdminPatientList;
     AdminPatientListAdapter adminPatientListAdapter;
     ArrayList<Patient> patientList;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference patientDatabaseRef;
+    DatabaseReference doctorDatabaseRef;
 
     public AdminPatientListFragment() {
         // Required empty public constructor
@@ -62,10 +62,12 @@ public class AdminPatientListFragment extends Fragment {
     private void initViews(View view) {
         tvEmptyPatientList = view.findViewById(R.id.tvEmptyPatientList);
 
-        rvPatientList = view.findViewById(R.id.rvPatientList);
+        rvAdminPatientList = view.findViewById(R.id.rvAdminPatientList);
         patientList = new ArrayList<>();
 
         firebaseDatabase = FirebaseDatabase.getInstance();
+
+        doctorDatabaseRef = firebaseDatabase.getReference(Constants.PATH_DOCTORS);
     }
 
     private void populatePatientList() {
@@ -85,38 +87,15 @@ public class AdminPatientListFragment extends Fragment {
 
                 if (patientList.isEmpty()) {
                     tvEmptyPatientList.setVisibility(View.VISIBLE);
-                    rvPatientList.setVisibility(View.GONE);
+                    rvAdminPatientList.setVisibility(View.GONE);
 
                 } else {
                     tvEmptyPatientList.setVisibility(View.GONE);
-                    rvPatientList.setVisibility(View.VISIBLE);
+                    rvAdminPatientList.setVisibility(View.VISIBLE);
 
-                    adminPatientListAdapter = new AdminPatientListAdapter(requireContext(), patientList);
-                    rvPatientList.setAdapter(adminPatientListAdapter);
-                    rvPatientList.setLayoutManager(new LinearLayoutManager(requireContext()));
-
-                    rvPatientList.setListener(new SwipeLeftRightCallback.Listener() {
-                        @Override
-                        public void onSwipedLeft(int position) {
-
-                        }
-
-                        @Override
-                        public void onSwipedRight(int position) {
-                            patientDatabaseRef.child(patientList.get(position).getPatientId()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-                                    if (task.isSuccessful())
-                                        Log.d(TAG, "Patient deleted successfully");
-                                    else
-                                        Log.d(TAG, "Failure to delete patient");
-                                }
-                            });
-
-                            patientList.remove(position);
-                            adminPatientListAdapter.notifyDataSetChanged();
-                        }
-                    });
+                    adminPatientListAdapter = new AdminPatientListAdapter(context, patientList, patientDatabaseRef, doctorDatabaseRef);
+                    rvAdminPatientList.setAdapter(adminPatientListAdapter);
+                    rvAdminPatientList.setLayoutManager(new LinearLayoutManager(context));
                 }
             }
 
@@ -125,5 +104,11 @@ public class AdminPatientListFragment extends Fragment {
 
             }
         });
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        this.context = context;
     }
 }

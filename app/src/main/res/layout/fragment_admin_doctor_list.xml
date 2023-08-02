@@ -6,15 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".admin.AdminDoctorListFragment">
 
-    <com.tsuryo.swipeablerv.SwipeableRecyclerView
-        android:id="@+id/rvDoctorList"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAdminDoctorList"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginHorizontal="14dp"
-        app:rightBgColor="@color/red"
-        app:rightImage="@drawable/ic_delete"
-        app:rightText="Delete"
-        app:textColor="@color/white"
         style="@style/BodyTextAppearance"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

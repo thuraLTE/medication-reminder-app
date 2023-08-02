@@ -124,8 +124,8 @@ public class PatientMyDoctorFragment extends Fragment {
                     tvMyDoctorQualification.setText(connDoctor.getDoctorQualification());
 
                 } else {
-                    tvEmptySubscribedDoctor.setVisibility(View.VISIBLE);
                     scrollSubscribedDoctor.setVisibility(View.GONE);
+                    tvEmptySubscribedDoctor.setVisibility(View.VISIBLE);
                 }
             }
 

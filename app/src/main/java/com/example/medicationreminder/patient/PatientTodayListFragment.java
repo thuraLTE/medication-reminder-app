@@ -211,6 +211,9 @@ public class PatientTodayListFragment extends Fragment {
                 tvEmptyMedicationList.setVisibility(View.VISIBLE);
                 rvTodayList.setVisibility(View.GONE);
             }
+        } else {
+            tvEmptyMedicationList.setVisibility(View.VISIBLE);
+            rvTodayList.setVisibility(View.GONE);
         }
     }
 

@@ -18,7 +18,6 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.PopupMenu;
 import android.widget.ProgressBar;
@@ -74,7 +73,7 @@ public class DoctorMyPatientListFragment extends Fragment implements DoctorPatie
     }
 
     private void initViews(View view) {
-        rvPatientList = view.findViewById(R.id.rvPatientList);
+        rvPatientList = view.findViewById(R.id.rvAdminPatientList);
 
         tvEmptyMyPatientList = view.findViewById(R.id.tvEmptyMyPatientList);
 
