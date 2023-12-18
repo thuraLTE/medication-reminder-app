@@ -12,5 +12,5 @@ Android Widgets/Apis/Libraries Used
 
 Use the following admin credential to log in as 'admin'.
 
-Email: admin@medicare.org
-Password: admin012345
+        Email: admin@medicare.org
+        Password: admin012345
