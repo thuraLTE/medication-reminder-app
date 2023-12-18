@@ -12,7 +12,7 @@
         style="@style/SubTitleTextAppearance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimaryVariant"
+        android:textColor="@color/black"
         android:textSize="22sp"
         tools:text="John Wick" />
 
@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:textColor="@color/colorPrimaryVariant"
+        android:textColor="@color/black"
         android:textStyle="italic"
         tools:text="Doc_123456789" />
 
@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:textColor="@color/colorPrimaryVariant"
+        android:textColor="@color/black"
         tools:text="Neurologist" />
 
     <TextView
@@ -41,7 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:textColor="@color/colorPrimaryVariant"
+        android:textColor="@color/black"
         tools:text="Doctor of Endocrinology (2013)" />
 
     <TextView
@@ -50,7 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:textColor="@color/colorPrimaryVariant"
+        android:textColor="@color/black"
         tools:text="johnwick@gmail.com" />
 
     <TextView
@@ -59,7 +59,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:textColor="@color/colorPrimaryVariant"
+        android:textColor="@color/black"
         tools:text="09123456" />
 
     <View

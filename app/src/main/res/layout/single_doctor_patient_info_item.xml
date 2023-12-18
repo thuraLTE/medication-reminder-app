@@ -11,7 +11,7 @@
         style="@style/SubTitleTextAppearance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimaryVariant"
+        android:textColor="@color/black"
         android:textSize="22sp"
         tools:text="David Hirby" />
 
@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:textColor="@color/colorPrimaryVariant"
+        android:textColor="@color/black"
         android:textStyle="italic"
         tools:text="Pat_123456789" />
 
@@ -49,7 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:textColor="@color/colorPrimaryVariant"
+        android:textColor="@color/black"
         tools:text="davidhirby@gmail.com" />
 
     <TextView
@@ -58,7 +58,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:textColor="@color/colorPrimaryVariant"
+        android:textColor="@color/black"
         tools:text="091234567" />
 
     <View
