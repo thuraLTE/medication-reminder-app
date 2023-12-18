@@ -1,7 +1,47 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.MedicationReminder" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    <style name="Base.Theme.MedicationReminder" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/colorPrimaryVariant</item>
+
     </style>
+
+    <style name="CustomIndicatorStyle" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@android:color/transparent</item>
+    </style>
+
+    <style name="TitleTextAppearance" parent="">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">38sp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="SubTitleTextAppearance" parent="">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">@font/alata</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="BodyTextAppearance" parent="">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/sulphur_point</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="ToolbarColoredTint" parent="Base.Theme.MedicationReminder">
+        <item name="android:textColorSecondary">@color/colorPrimary</item>
+    </style>
+
+    <style name="CustomDialog" parent="ThemeOverlay.AppCompat.Dialog">
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
 </resources>
