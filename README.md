@@ -14,3 +14,11 @@ Use the following admin credential to log in as 'admin'.
 
         Email: admin@medicare.org
         Password: admin012345
+
+To register as a 'doctor', enter a suffix text 'doctor@medicare.org' in the email field.
+
+        e.g. Email: david.doctor@medicare.org
+
+To register as a 'patient', enter a normal email suffix '@gmail.com'.
+
+        e.g. Email: david@gmail.com
