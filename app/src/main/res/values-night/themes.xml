@@ -16,7 +16,7 @@
     <style name="TitleTextAppearance" parent="">
         <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">38sp</item>
+        <item name="android:textSize">32sp</item>
         <item name="android:includeFontPadding">false</item>
     </style>
 
