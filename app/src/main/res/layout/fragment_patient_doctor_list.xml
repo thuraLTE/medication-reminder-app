@@ -28,9 +28,10 @@
             android:drawableStart="@drawable/ic_search"
             android:drawablePadding="12dp"
             android:hint="@string/search_doctors_hint"
+            android:textColorHint="@color/gray"
             android:inputType="text"
             android:padding="14dp"
-            android:textColor="@color/colorPrimaryVariant" />
+            android:textColor="@color/black" />
 
         <Spinner
             android:id="@+id/spinnerDoctorCategory"
@@ -64,7 +65,7 @@
         android:layout_height="0dp"
         android:gravity="center"
         android:text="@string/no_results_found"
-        android:textColor="@color/colorPrimaryVariant"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -101,6 +102,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:maxImageSize="40dp"
-        app:tint="@color/colorPrimaryVariant" />
+        app:tint="@color/black" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

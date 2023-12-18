@@ -38,7 +38,6 @@ public class AdminDoctorListFragment extends Fragment {
 
     Context context;
     TextView tvEmptyDoctorList;
-    FloatingActionButton fabAddNewDoctor;
     RecyclerView rvAdminDoctorList;
     AdminDoctorListAdapter adminDoctorListAdapter;
     ArrayList<Doctor> doctorList;
@@ -64,13 +63,10 @@ public class AdminDoctorListFragment extends Fragment {
 
         initViews(view);
         populateDoctorList();
-        initEvents();
     }
 
     private void initViews(View view) {
         tvEmptyDoctorList = view.findViewById(R.id.tvEmptyDoctorList);
-
-        fabAddNewDoctor = view.findViewById(R.id.fabAddNewDoctor);
 
         rvAdminDoctorList = view.findViewById(R.id.rvAdminDoctorList);
         doctorList = new ArrayList<>();
@@ -113,15 +109,6 @@ public class AdminDoctorListFragment extends Fragment {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
-            }
-        });
-    }
-
-    private void initEvents() {
-        fabAddNewDoctor.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getParentFragmentManager().beginTransaction().replace(R.id.adminFragmentContainer, AdminAddNewDoctorFragment.class, null).commit();
             }
         });
     }

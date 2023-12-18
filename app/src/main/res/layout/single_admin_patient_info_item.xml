@@ -15,6 +15,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_marginEnd="5dp"
             android:orientation="vertical">
 
             <TextView
@@ -23,7 +24,7 @@
                 android:layout_height="wrap_content"
                 style="@style/SubTitleTextAppearance"
                 android:textSize="22sp"
-                android:textColor="@color/colorPrimaryVariant"
+                android:textColor="@color/black"
                 tools:text="David Hirby"/>
 
             <TextView
@@ -31,7 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/BodyTextAppearance"
-                android:textColor="@color/colorPrimaryVariant"
+                android:textColor="@color/black"
                 tools:text="Pat_123456789"
                 android:textStyle="italic"
                 android:layout_marginTop="5dp"/>
@@ -41,7 +42,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/BodyTextAppearance"
-                android:textColor="@color/colorPrimaryVariant"
+                android:textColor="@color/black"
                 tools:text="Diabetes"
                 android:layout_marginTop="5dp"/>
 
@@ -50,7 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/BodyTextAppearance"
-                android:textColor="@color/colorPrimaryVariant"
+                android:textColor="@color/black"
                 tools:text="davidhirby@gmail.com"
                 android:layout_marginTop="5dp"/>
 
@@ -59,7 +60,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/BodyTextAppearance"
-                android:textColor="@color/colorPrimaryVariant"
+                android:textColor="@color/black"
                 tools:text="091234567"
                 android:layout_marginTop="5dp"/>
 
@@ -69,6 +70,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_marginStart="5dp"
             android:orientation="vertical">
 
             <TextView
@@ -77,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="22sp"
                 style="@style/SubTitleTextAppearance"
-                android:textColor="@color/colorPrimaryVariant"
+                android:textColor="@color/black"
                 tools:text="John Wick"/>
 
             <TextView
@@ -85,7 +87,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/BodyTextAppearance"
-                android:textColor="@color/colorPrimaryVariant"
+                android:textColor="@color/black"
                 tools:text="Doc_123456789"
                 android:textStyle="italic"
                 android:layout_marginTop="5dp"/>

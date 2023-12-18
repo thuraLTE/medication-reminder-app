@@ -18,7 +18,7 @@
             android:layout_marginHorizontal="14dp"
             android:layout_marginTop="14dp"
             android:text="@string/medication_name_enquiry"
-            android:textColor="@color/colorPrimaryVariant" />
+            android:textColor="@color/black" />
 
         <EditText
             android:id="@+id/edtMedicationName"
@@ -29,9 +29,10 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/edt_bg_one"
             android:hint="@string/medication_name"
+            android:textColorHint="@color/gray"
             android:inputType="text"
             android:padding="14dp"
-            android:textColor="@color/colorPrimaryVariant" />
+            android:textColor="@color/black" />
 
         <TextView
             style="@style/SubTitleTextAppearance"
@@ -40,7 +41,7 @@
             android:layout_marginHorizontal="14dp"
             android:layout_marginTop="14dp"
             android:text="@string/medication_type_enquiry"
-            android:textColor="@color/colorPrimaryVariant" />
+            android:textColor="@color/black" />
 
         <HorizontalScrollView
             android:layout_width="match_parent"
@@ -116,7 +117,7 @@
             android:layout_marginHorizontal="14dp"
             android:layout_marginTop="6dp"
             android:text="@string/dose_enquiry"
-            android:textColor="@color/colorPrimaryVariant" />
+            android:textColor="@color/black" />
 
         <RelativeLayout
             android:id="@+id/relativeDose"
@@ -133,7 +134,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:text="@string/unit"
-                android:textColor="@color/colorPrimaryVariant" />
+                android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/tvDoseInput"
@@ -165,7 +166,7 @@
             android:layout_marginHorizontal="14dp"
             android:layout_marginTop="6dp"
             android:text="@string/medication_frequency_enquiry"
-            android:textColor="@color/colorPrimaryVariant" />
+            android:textColor="@color/black" />
 
         <Spinner
             android:id="@+id/spinnerFrequency"
@@ -202,7 +203,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/monday"
-                    android:textColor="@color/colorPrimaryVariant"
+                    android:textColor="@color/black"
                     android:textSize="18sp" />
 
                 <CheckBox
@@ -212,7 +213,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/tuesday"
-                    android:textColor="@color/colorPrimaryVariant"
+                    android:textColor="@color/black"
                     android:textSize="18sp" />
 
                 <CheckBox
@@ -222,7 +223,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/wednesday"
-                    android:textColor="@color/colorPrimaryVariant"
+                    android:textColor="@color/black"
                     android:textSize="18sp" />
 
                 <CheckBox
@@ -232,7 +233,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/thursday"
-                    android:textColor="@color/colorPrimaryVariant"
+                    android:textColor="@color/black"
                     android:textSize="18sp" />
 
             </LinearLayout>
@@ -252,7 +253,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="6dp"
                     android:text="@string/friday"
-                    android:textColor="@color/colorPrimaryVariant"
+                    android:textColor="@color/black"
                     android:textSize="18sp" />
 
                 <CheckBox
@@ -262,7 +263,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="6dp"
                     android:text="@string/saturday"
-                    android:textColor="@color/colorPrimaryVariant"
+                    android:textColor="@color/black"
                     android:textSize="18sp" />
 
                 <CheckBox
@@ -272,7 +273,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="6dp"
                     android:text="@string/sunday"
-                    android:textColor="@color/colorPrimaryVariant"
+                    android:textColor="@color/black"
                     android:textSize="18sp" />
 
             </LinearLayout>
@@ -312,7 +313,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_toEndOf="@id/ivAddTime1"
                     android:text="@string/add_reminder_time"
-                    android:textColor="@color/colorPrimaryVariant" />
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/tvTime1"
@@ -348,7 +349,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/duration_enquiry"
-                android:textColor="@color/colorPrimaryVariant" />
+                android:textColor="@color/black" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -370,7 +371,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:text="@string/start_date"
-                        android:textColor="@color/colorPrimaryVariant" />
+                        android:textColor="@color/black" />
 
                     <TextView
                         android:id="@+id/tvStartDateInput"
@@ -420,7 +421,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:text="@string/end_date"
-                        android:textColor="@color/colorPrimaryVariant" />
+                        android:textColor="@color/black" />
 
                     <TextView
                         android:id="@+id/tvDurationOrEndDateInput"
@@ -445,7 +446,7 @@
             android:layout_marginHorizontal="14dp"
             android:layout_marginTop="14dp"
             android:text="@string/intake_instructions_enquiry"
-            android:textColor="@color/colorPrimaryVariant" />
+            android:textColor="@color/black" />
 
         <Spinner
             android:id="@+id/spinnerIntakeInstructions"
@@ -470,10 +471,10 @@
             android:inputType="text"
             android:lines="3"
             android:padding="14dp"
-            android:textColor="@color/colorPrimaryVariant"
+            android:textColor="@color/black"
             android:visibility="visible" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnConfirm"
             style="@style/BodyTextAppearance"
             android:layout_width="match_parent"
@@ -481,7 +482,7 @@
             android:layout_marginHorizontal="14dp"
             android:layout_marginBottom="14dp"
             android:layout_marginTop="10dp"
-            android:backgroundTint="@color/colorPrimaryVariant"
+            android:background="@drawable/login_register_btn_bg"
             android:text="@string/confirm"
             android:textColor="@color/colorPrimary" />
 
