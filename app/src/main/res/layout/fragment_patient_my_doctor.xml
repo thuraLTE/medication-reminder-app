@@ -15,7 +15,7 @@
         android:layout_centerInParent="true"
         android:gravity="center"
         android:text="@string/no_subscribed_doctor_found"
-        android:textColor="@color/black"
+        android:textColor="@color/colorPrimaryVariant"
         android:visibility="gone" />
 
     <ScrollView
@@ -32,7 +32,6 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="5dp">
 
@@ -49,7 +48,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
+                        android:textColor="@color/colorPrimaryVariant"
                         tools:text="Doc. John Wick" />
 
                     <TextView
@@ -59,7 +58,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
+                        android:textColor="@color/colorPrimaryVariant"
                         tools:text="Doc_12345" />
 
                     <TextView
@@ -69,7 +68,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
+                        android:textColor="@color/colorPrimaryVariant"
                         tools:text="johnwick.doctor@medicare.org" />
 
                     <TextView
@@ -79,7 +78,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
+                        android:textColor="@color/colorPrimaryVariant"
                         tools:text="09123456789" />
 
                     <TextView
@@ -89,7 +88,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
+                        android:textColor="@color/colorPrimaryVariant"
                         tools:text="Neurologist" />
 
                     <TextView
@@ -99,7 +98,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
+                        android:textColor="@color/colorPrimaryVariant"
                         tools:text="PhD of Neurology" />
 
                 </LinearLayout>
@@ -110,7 +109,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="5dp">
 
@@ -132,7 +130,7 @@
                         android:layout_height="wrap_content"
                         android:text="Upcoming Appointments"
                         android:textAlignment="center"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/colorPrimaryVariant" />
 
                     <LinearLayout
                         android:id="@+id/linearAddAppointmentTime"
@@ -150,7 +148,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="5dp"
                         android:layout_marginTop="10dp"
-                        android:backgroundTint="@color/black"
+                        android:backgroundTint="@color/colorPrimaryVariant"
                         android:text="Add an appointment"
                         android:textColor="@color/colorPrimary" />
 
@@ -165,7 +163,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:layout_marginTop="20dp"
-                android:backgroundTint="@color/black"
+                android:backgroundTint="@color/colorPrimaryVariant"
                 android:text="@string/confirm"
                 android:textColor="@color/colorPrimary" />
 

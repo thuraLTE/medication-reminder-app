@@ -7,7 +7,6 @@
         <item
             android:id="@+id/fragmentAdminPatientList"
             android:title="@string/patients"
-            
             android:icon="@drawable/ic_patient"
             android:checked="true"/>
 

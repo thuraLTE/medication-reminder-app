@@ -23,7 +23,7 @@
         android:layout_marginStart="8dp"
         android:layout_toEndOf="@id/ivAddAnotherTime"
         android:text="@string/add_reminder_time"
-        android:textColor="@color/black" />
+        android:textColor="@color/colorPrimaryVariant" />
 
     <TextView
         android:id="@+id/tvAddedAnotherTime"

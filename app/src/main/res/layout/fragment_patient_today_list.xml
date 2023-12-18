@@ -22,7 +22,7 @@
         android:visibility="gone"
         android:gravity="center"
         style="@style/SubTitleTextAppearance"
-        android:textColor="@color/black"
+        android:textColor="@color/colorPrimaryVariant"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,6 +52,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:maxImageSize="35dp"
-        app:tint="@color/black" />
+        app:tint="@color/colorPrimaryVariant" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

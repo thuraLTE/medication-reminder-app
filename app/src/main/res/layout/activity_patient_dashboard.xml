@@ -10,13 +10,12 @@
         android:id="@+id/toolBar"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/black"
+        android:background="@color/colorPrimaryVariant"
         app:buttonGravity="bottom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:title="@string/today"
-        app:titleTextColor="@color/colorPrimary"
         android:gravity="bottom"
         android:paddingBottom="5dp"
         android:theme="@style/ToolbarColoredTint"
@@ -55,7 +54,7 @@
         app:itemIconTint="@color/btm_nav_color_state"
         app:labelVisibilityMode="labeled"
         app:itemActiveIndicatorStyle="@style/CustomIndicatorStyle"
-        app:backgroundTint="@color/black"
+        app:backgroundTint="@color/colorPrimaryVariant"
         app:menu="@menu/patient_btm_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

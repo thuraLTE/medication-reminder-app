@@ -10,7 +10,7 @@
         style="@style/SubTitleTextAppearance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
+        android:textColor="@color/colorPrimaryVariant"
         android:textSize="22sp"
         tools:text="2/7/2013 - 8:00 AM" />
 
@@ -29,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:textColor="@color/black"
+        android:textColor="@color/colorPrimaryVariant"
         tools:text="Pat_12345" />
 
     <TextView
@@ -38,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:textColor="@color/black"
+        android:textColor="@color/colorPrimaryVariant"
         tools:text="davidquincy@gmail.com" />
 
     <TextView
@@ -47,7 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:textColor="@color/black"
+        android:textColor="@color/colorPrimaryVariant"
         tools:text="0912345" />
 
     <View

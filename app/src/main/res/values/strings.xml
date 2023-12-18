@@ -29,7 +29,7 @@
     <string name="day_duration_enquiry">For how many days?</string>
     <string name="day_unit_placeholder">%s days</string>
     <string name="add_reminder_time">Add reminder time</string>
-    <string name="remove_reminder_time">Remove time</string>
+    <string name="remove_reminder_time">Remove reminder time</string>
     <string name="monday">Mon</string>
     <string name="tuesday">Tue</string>
     <string name="wednesday">Wed</string>
@@ -56,7 +56,7 @@
     <string name="monitored_by">Monitored by</string>
     <string name="status">Status</string>
     <string name="your_phone_number">Enter Phone Number</string>
-    <string name="search_doctors_hint">Search</string>
+    <string name="search_doctors_hint">Search doctors</string>
     <string name="search_nurses">Search nurses</string>
     <string name="add_new_doctor">Add new doctor</string>
     <string name="doctor_s_full_name">Doctor\'s Full Name</string>

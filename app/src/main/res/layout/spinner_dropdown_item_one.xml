@@ -7,7 +7,7 @@
     android:background="@drawable/edt_bg_one"
     android:paddingVertical="18dp"
     android:paddingHorizontal="14dp"
-    android:textColor="@color/black"
+    android:textColor="@color/colorPrimaryVariant"
     tools:text="X times daily">
 
 </CheckedTextView>

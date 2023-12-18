@@ -177,7 +177,7 @@ public class PatientTodayListFragment extends Fragment {
 
                     if (!(todayDate.before(startDate) || todayDate.after(endDate))) {
 
-                        if (medication.getSelectedReminderTimes().size() > 0) {
+                        if (medication.getSelectedReminderTimes().size() > 1) {
                             for (Map.Entry<String, ReminderTime> entry : medication.getSelectedReminderTimes().entrySet()) {
                                 medicationWithReminderTimesList.add(entry.getValue());
                                 reminderTimeToMedicationHashMap.put(entry.getValue(), medication);
@@ -241,7 +241,6 @@ public class PatientTodayListFragment extends Fragment {
                     if (!medicationList.isEmpty()) {
                         for (Medication medication : medicationList) {
                             Log.d(TAG, "Medication start date: " + medication.getStartDate());
-                            Log.d(TAG, "Medication end date: " + medication.getEndDate());
 
                             java.time.LocalDate startLocalDate = HelperClass.parseDate(medication.getStartDate());
                             Date startDate = HelperClass.getDate(startLocalDate.getYear(), startLocalDate.getMonthValue(), startLocalDate.getDayOfMonth());
@@ -253,7 +252,7 @@ public class PatientTodayListFragment extends Fragment {
 
                                 if (!(selectedDate.before(startDate) || selectedDate.after(endDate))) {
 
-                                    if (medication.getSelectedReminderTimes().size() > 0) {
+                                    if (medication.getSelectedReminderTimes().size() > 1) {
                                         for (Map.Entry<String, ReminderTime> entry : medication.getSelectedReminderTimes().entrySet()) {
                                             medicationWithReminderTimesList.add(entry.getValue());
                                             reminderTimeToMedicationHashMap.put(entry.getValue(), medication);
@@ -291,17 +290,17 @@ public class PatientTodayListFragment extends Fragment {
             picker.setDays(14)
                     .setOffset(3)
                     .setDateSelectedColor(ContextCompat.getColor(getActivity(), R.color.colorPrimary))
-                    .setDateSelectedTextColor(ContextCompat.getColor(getActivity(), R.color.black))
+                    .setDateSelectedTextColor(ContextCompat.getColor(getActivity(), R.color.colorPrimaryVariant))
                     .setMonthAndYearTextColor(ContextCompat.getColor(getActivity(), R.color.colorVariant))
                     .setTodayButtonTextColor(ContextCompat.getColor(getActivity(), R.color.colorVariant))
-                    .setTodayDateTextColor(ContextCompat.getColor(getActivity(), R.color.black))
+                    .setTodayDateTextColor(ContextCompat.getColor(getActivity(), R.color.colorPrimaryVariant))
                     .setTodayDateBackgroundColor(ContextCompat.getColor(getActivity(), R.color.green))
                     .setUnselectedDayTextColor(ContextCompat.getColor(getActivity(), R.color.colorVariant))
                     .setDayOfWeekTextColor(ContextCompat.getColor(getActivity(), R.color.colorVariant))
                     .showTodayButton(true)
                     .init();
 
-            picker.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.black));
+            picker.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.colorPrimaryVariant));
             picker.setDate(new DateTime());
         }
     }

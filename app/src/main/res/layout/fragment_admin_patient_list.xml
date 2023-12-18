@@ -45,7 +45,7 @@
         android:layout_height="0dp"
         android:gravity="center"
         android:text="@string/no_registered_patients_message"
-        android:textColor="@color/black"
+        android:textColor="@color/colorPrimaryVariant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

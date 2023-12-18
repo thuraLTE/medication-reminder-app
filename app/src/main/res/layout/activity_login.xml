@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/alata"
             android:text="@string/app_name"
-            android:textColor="@color/black" />
+            android:textColor="@color/colorPrimaryVariant" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/txtFieldEmail"
@@ -35,19 +35,17 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="14dp"
             android:layout_marginTop="50dp"
-            app:boxStrokeColor="@color/edit_text_color_state"
             android:hint="@string/your_email"
             app:hintTextColor="@color/gray"
-            android:textColorHint="@color/gray"
             app:startIconDrawable="@drawable/ic_email"
-            app:startIconTint="@color/black">
+            app:startIconTint="@color/colorPrimaryVariant">
 
             <com.google.android.material.textfield.TextInputEditText
                 style="@style/BodyTextAppearance"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textEmailAddress"
-                android:textColor="@color/black" />
+                android:textColor="@color/colorPrimaryVariant" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -58,43 +56,41 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="14dp"
             android:layout_marginTop="10dp"
-            app:boxStrokeColor="@color/edit_text_color_state"
             android:hint="@string/your_password"
             app:hintTextColor="@color/gray"
-            android:textColorHint="@color/gray"
             app:passwordToggleEnabled="true"
-            app:passwordToggleTint="@color/black"
+            app:passwordToggleTint="@color/colorPrimaryVariant"
             app:startIconDrawable="@drawable/ic_password"
-            app:startIconTint="@color/black">
+            app:startIconTint="@color/colorPrimaryVariant">
 
             <com.google.android.material.textfield.TextInputEditText
                 style="@style/BodyTextAppearance"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textPassword"
-                android:textColor="@color/black" />
+                android:textColor="@color/colorPrimaryVariant" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:id="@+id/btnLogin"
             style="@style/BodyTextAppearance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="14dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/login_register_btn_bg"
+            android:backgroundTint="@color/colorPrimaryVariant"
             android:text="@string/login"
             android:textColor="@color/colorPrimary" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:id="@+id/btnRegister"
             style="@style/BodyTextAppearance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="14dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/login_register_btn_bg"
+            android:backgroundTint="@color/colorPrimaryVariant"
             android:text="@string/register"
             android:textColor="@color/colorPrimary" />
 

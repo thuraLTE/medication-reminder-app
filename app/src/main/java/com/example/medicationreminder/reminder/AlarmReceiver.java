@@ -36,7 +36,7 @@ public class AlarmReceiver extends BroadcastReceiver {
                 context.getApplicationContext(),
                 PENDING_INTENT_REQUEST_CODE,
                 contentIntent,
-                PendingIntent.FLAG_IMMUTABLE
+                PendingIntent.FLAG_UPDATE_CURRENT
         );
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

@@ -45,7 +45,7 @@ public class ReminderManager {
                     context.getApplicationContext(),
                     reminderTime.hashCode(),
                     intent,
-                    PendingIntent.FLAG_IMMUTABLE
+                    PendingIntent.FLAG_UPDATE_CURRENT
             );
 
             calendar.set(Calendar.HOUR_OF_DAY, hour);

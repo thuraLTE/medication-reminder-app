@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".patient.PatientMedicationListFragment">
+    tools:context=".doctor.DoctorMedicationListForPatientFragment">
 
     <Toolbar
         android:id="@+id/toolBar"
@@ -16,33 +16,30 @@
         android:titleTextAppearance="@style/TitleTextAppearance"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/tvEmptyMedicationList"
-        style="@style/SubTitleTextAppearance"
-        android:visibility="gone"
-        android:layout_marginHorizontal="14dp"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:text="@string/empty_medication_list_message"
-        android:textColor="@color/colorPrimaryVariant"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolBar" />
+        <ImageView
+            android:id="@+id/ivAddMedication"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_add"
+            app:tint="@color/colorPrimary" />
+
+    </Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvMedicationList"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:background="@color/gray"
         android:paddingVertical="7dp"
-        tools:listitem="@layout/single_patient_medication_item"
-        android:background="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolBar" />
+        app:layout_constraintTop_toBottomOf="@id/toolBar"
+        tools:listitem="@layout/single_patient_medication_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

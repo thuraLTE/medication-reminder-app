@@ -13,7 +13,7 @@
         style="@style/SubTitleTextAppearance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
+        android:textColor="@color/colorPrimaryVariant"
         tools:text="8:00 AM" />
 
     <RelativeLayout
@@ -42,7 +42,7 @@
                 style="@style/SubTitleTextAppearance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
+                android:textColor="@color/colorPrimaryVariant"
                 tools:text="Probiotics" />
 
             <TextView
@@ -51,7 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:textColor="@color/black"
+                android:textColor="@color/colorPrimaryVariant"
                 tools:text="1 pill" />
 
         </LinearLayout>

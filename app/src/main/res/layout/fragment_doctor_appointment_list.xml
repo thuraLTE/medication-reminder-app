@@ -15,7 +15,7 @@
         style="@style/SubTitleTextAppearance"
         android:layout_margin="14dp"
         android:gravity="center"
-        android:textColor="@color/black"
+        android:textColor="@color/colorPrimaryVariant"
         android:layout_centerInParent="true"
         android:text="@string/empty_appointment_list_message"/>
 
